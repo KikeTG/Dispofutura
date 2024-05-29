@@ -1,3 +1,5 @@
+# Última modificación: 2024-05-29 14:22:33
+# Última modificación: 2024-04-25 14:58:42
 #  COPIAR ARCHIVO BASE SP, MAESTRA AFM, DEFINIR CARPETA DE DESTINO PRINCIPAL, CREAR CARPETA SEMANA ACTUAL, TUBO SEMANAL, STOCK TIENDA, STOCK, TRANSITO CONSOLIDADO
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 import os
