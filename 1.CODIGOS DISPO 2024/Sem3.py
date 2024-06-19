@@ -1,5 +1,3 @@
-# Última modificación: 2024-05-29 14:22:33
-# Última modificación: 2024-04-25 14:58:45
 #  COPIAR ARCHIVO BASE SP, MAESTRA AFM, DEFINIR CARPETA DE DESTINO PRINCIPAL, CREAR CARPETA SEMANA ACTUAL, TUBO SEMANAL, STOCK TIENDA, STOCK, TRANSITO CONSOLIDADO
 # ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 import os
@@ -39,12 +37,12 @@ mes_siguiente = meses.get(mes_siguiente, mes_siguiente)
 # Ruta de la carpeta donde se encuentran los archivos
 # carpeta_origen = r'C:\Users\Etorres\Inchcape\Open to Buy_OTB\2023 OK'
 
-carpeta_origen = os.path.join(user_home_dir, 'Inchcape', 'Planificación y Compras Chile - Documentos', 'Planificación y Compras Aftermarket', 'Open to Buy_OTB', '2024')
+carpeta_origen = os.path.join(user_home_dir, 'Inchcape', 'Planificación y abastecimiento AFM - Documentos', 'Planificación y Compras AFM', 'Open to Buy_OTB', '2024')
 
 # RUTA DEL "C:\Users\Etorres\Inchcape\Maestros Actualizables\Maestra Aftermarket Actualizable.xlsx"
 # ruta_AFMACTUALIZABLE = r'C:\Users\Etorres\Inchcape\Maestros Actualizables\Maestra Aftermarket Actualizable.xlsx'
 
-ruta_AFMACTUALIZABLE = os.path.join(user_home_dir, 'Inchcape', 'Planificación y Compras Chile - Documentos', 'Planificación y Compras Maestros', 'Vigencias', 'Maestra Retail', 'Maestra Aftermarket Actualizable.xlsx')
+ruta_AFMACTUALIZABLE = os.path.join(user_home_dir, 'Inchcape', 'Planificación y abastecimiento AFM - Documentos', 'Planificación y Compras Maestros', 'Vigencias', 'Maestra Retail', 'Maestra Aftermarket Actualizable.xlsx')
 
 
 # Identificar la subcarpeta que contiene el mes actual en su nombre
@@ -129,7 +127,7 @@ mes_anterior_numero = ultimo_dia_mes_anterior.strftime('%m')
 
 # cod actual s4 mes anterior
 # ruta_base = "C:\\Users\\Etorres\\OneDrive - Inchcape\\Planificación y Compras Maestros\\2023\\"
-ruta_base = os.path.join(user_home_dir, "Inchcape", "Planificación y Compras Chile - Documentos", "Planificación y Compras Maestros", "2024")
+ruta_base = os.path.join(user_home_dir, "Inchcape", "Planificación y abastecimiento AFM - Documentos", "Planificación y Compras Maestros", "2024")
 
 nombre_carpeta = f"2024-{mes_anterior_numero}"
 ruta_carpeta_mes = os.path.join(ruta_base, nombre_carpeta)
@@ -161,9 +159,9 @@ def es_formato_fecha_valido(nombre_carpeta):
 
 
 # Ruta donde están las carpetas con fechas
-# ruta_kpi_reportes = r'C:\Users\Etorres\OneDrive - Inchcape\Planificación y Compras KPI-Reportes\Tubo Semanal'
+# ruta_kpi_reportes = r'C:\Users\Etorres\OneDrive - Inchcape\KPI\Tubo Semanal'
 
-ruta_kpi_reportes = os.path.join(user_home_dir, 'Inchcape', 'Planificación y Compras Chile - Documentos','Planificación y Compras KPI-Reportes', 'Tubo Semanal')
+ruta_kpi_reportes = os.path.join(user_home_dir, 'Inchcape', 'Planificación y abastecimiento AFM - Documentos','KPI', 'Tubo Semanal')
 
 # Obtener una lista de todas las carpetas en la ruta_kpi_reportes que cumplan con el formato de fecha
 carpetas = [d for d in os.listdir(ruta_kpi_reportes) if os.path.isdir(os.path.join(ruta_kpi_reportes, d)) and es_formato_fecha_valido(d)]
@@ -231,7 +229,7 @@ import locale
 # Ruta donde se encuentran las carpetas por año y mes
 # directorio_forecast = r"C:\Users\Etorres\OneDrive - Inchcape\Forecast Inbound"
 
-directorio_forecast = os.path.join(user_home_dir, 'Inchcape', 'Planificación y Compras Chile - Documentos', 'Planificación y Compras Aftermarket', 'Forecast Inbound')
+directorio_forecast = os.path.join(user_home_dir, 'Inchcape', 'Planificación y abastecimiento AFM - Documentos', 'Planificación y Compras AFM', 'Forecast Inbound')
 
 
 # Mapeo de nombres de meses en inglés a español
@@ -412,9 +410,9 @@ import re
 from datetime import datetime
 
 # Ruta de origen
-# ruta_origen = r"C:\Users\Etorres\Inchcape\Planificación y Compras KPI-Reportes\Faltantes y Sobrantes Retail\Consolidado Sobrantes y Faltantes AP - AGP"
+# ruta_origen = r"C:\Users\Etorres\Inchcape\KPI\Faltantes y Sobrantes Retail\Consolidado Sobrantes y Faltantes AP - AGP"
 
-ruta_origen = os.path.join(user_home_dir, 'Inchcape', 'Planificación y Compras Chile - Documentos', 'Planificación y Compras KPI-Reportes', 'Faltantes y Sobrantes Retail', 'Sobrantes y Faltantes AP - AGP')
+ruta_origen = os.path.join(user_home_dir, 'Inchcape', 'Planificación y abastecimiento AFM - Documentos', 'KPI', 'Faltantes y Sobrantes Retail', 'Sobrantes y Faltantes AP - AGP')
 
 # Lista todos los archivos en la ruta de origen
 archivos = [f for f in os.listdir(ruta_origen) if os.path.isfile(os.path.join(ruta_origen, f))]
@@ -1028,7 +1026,7 @@ from datetime import datetime, timedelta
 import locale
 
 # Ruta donde se encuentran las carpetas por año y mes
-directorio_forecast_modificado = os.path.join(user_home_dir, 'Inchcape', 'Planificación y Compras Chile - Documentos', 'Planificación y Compras Aftermarket', 'Forecast Inbound')
+directorio_forecast_modificado = os.path.join(user_home_dir, 'Inchcape', 'Planificación y abastecimiento AFM - Documentos', 'Planificación y Compras AFM', 'Forecast Inbound')
 
 # Mapeo de nombres de meses en inglés a español
 meses_en_espanol_modificado = {
@@ -1291,7 +1289,7 @@ import datetime
 # Obtener la fecha actual
 fecha_actual = datetime.datetime.now()
 # Establecer la fecha de referencia en el día 15 del mes actual
-fecha_referencia = fecha_actual.replace(day=16)
+fecha_referencia = fecha_actual.replace(day=17)
 
 # Encontrar el número de semana del año para el día 15 del mes
 numero_semana_quincena = fecha_referencia.isocalendar()[1]
