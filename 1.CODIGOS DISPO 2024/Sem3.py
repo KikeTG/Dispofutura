@@ -1514,6 +1514,8 @@ for col in columnas_semanas:
     
     nuevas_columnas[nueva_col] = columna_temporal
 
+    
+
 # Concatenar todas las nuevas columnas a merged_df2
 merged_df2 = pd.concat([merged_df2, pd.DataFrame(nuevas_columnas)], axis=1)
 # Eliminar las columnas que terminan en "_weekly"
